@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Todos from './Todos';
 import AddTodo from './AddTodo';
+import Navbar from './components/Navbar';
 
 class App extends Component {
   state = {
@@ -28,6 +29,7 @@ class App extends Component {
   render() {
     return (
       <div className="todo-app container">
+        <Navbar />
         <h1 className="center blue-text">My Todo List</h1>
         <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
         <AddTodo addTodo={this.addTodo} />
