@@ -34,11 +34,10 @@ class App extends Component {
     return (
       <BrowserRouter>
       <Navbar />
-        <Route path="/home" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
-        
-
+      
       <div className="todo-app container">
         <h1 className="center blue-text">My Todo List</h1>
         <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
