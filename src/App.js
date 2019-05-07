@@ -37,10 +37,12 @@ class App extends Component {
         <Route exact path="/home" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
-      
+        
       <div className="todo-app container">
         <h1 className="center blue-text">My Todo List</h1>
+        <p><i>Click on todo to delete it from the list.</i></p>
         <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
+        
         <AddTodo addTodo={this.addTodo} />
       </div>
       </BrowserRouter>
