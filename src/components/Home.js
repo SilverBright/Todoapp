@@ -31,7 +31,7 @@ class Home extends Component {
                         <img src={Target} alt="target"/>
                         <div className="card-content">
                             <Link to={'/' + post.id}>
-                            <span className="card-title">{post.title}</span>
+                            <span className="card-title purple-text">{post.title}</span>
                             </Link>
                             <p>{post.body}</p>
                         </div>
