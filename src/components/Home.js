@@ -1,17 +1,24 @@
 import React, { Component }from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 
 class Home extends Component {
     state = {
         posts: [ ]
     }
     componentDidMount() {
-        axios.get('https://jsonplaceholder.typicode.com/posts')
-            .then(res => {
-            this.setState({
-                posts: res.data.slice(0,10)
-            })
-        })
+        // axios.get('https://jsonplaceholder.typicode.com/posts')
+        fetch('https://jsonplaceholder.typicode.com/posts')
+            // .then(res => {
+                .then(response => response.json())
+            // this.setState({
+                // posts: res.data.slice(0,10)
+                .then(data => {
+                    this.setState({
+                        posts: data.slice(0,10)
+                    })
+                })
+            // })
+        // })
     }
     render() {
         const { posts } = this.state;
